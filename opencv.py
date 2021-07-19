@@ -4,8 +4,8 @@ from matplotlib import pyplot as plt
 
 
 #좌우 스테레오 이미지 불러오기, Import left and right stereo images
-imgL = cv2.imread('assets\cupL2_27_8.jpg')
-imgR = cv2.imread('assets\cupR2_27_8.jpg')
+imgL = cv2.imread('calibration_complete\comL_90_10.png')
+imgR = cv2.imread('calibration_complete\comR_90_10.png')
 
 
 #스테레오SGBM 함수 파라미터 입력 및 저장, Enter and save stereoSGBM function parameters
@@ -33,9 +33,9 @@ plt.show()
 #거리측정을 원하는 부분의 좌표선택, 
 # Select the coordinates of the part you want to measure the distance
 #print(disparity[427][694]) #여기서는 컵부분을 선택, Select the part that is cup
-print(disparity[434][891])
+print(disparity[403][951])
 
-pixel_disparity = disparity[434][891]
+pixel_disparity = disparity[403][951]
 focal_length = 5.4 #카메라 초점거리
 camera_between = 80 #카메라 사이거리
 
